@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/mastermind.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mastermind</title>
+</head>
+
+<body>
+  <canvas id="bg"></canvas>
+  <script type="module" src="/main.js"></script>
+  <h1>Mastermind Settings</h1>
+  <div class="container" id="menu">
+    <form action="" class="form">
+      <input type="number"  id="codeSize" class="form__input" value="4" min="4" max="8"/>
+      <label for="codeSize" class="form__label">Secret code size (4-8)</label>
+  
+      <input type="number" id="numColors" class="form__input" value="6" min="6" max="12"/>
+      <label for="numColors" class="form__label">Number of colors (6-12)</label>
+  
+      <input type="number" id="numTries" class="form__input" value="10" min="10" max="20"/>
+      <label for="numTries" class="form__label">Number of tries (10-20)</label>
+  
+      <input type="checkbox" class="form__input" id="allowDuplicates" />
+      <label for="allowDuplicates" class="form__label">Allow duplicates?</label>
+    </form>
+    
+  </div>
+  <div class="buttons-container" id="buttonsDiv">
+    <button class="button-arounder" id="startBtn">START</button>
+  </div>
+
+  <div class="help-container" id="helpDiv" hidden>
+    <input class="dropdown" id="dropdown" type="checkbox" name="dropdown"/>
+    <label class="dropdown-label" for="dropdown">Info <i class="uil uil-arrow-down"></i></label>
+    <div class="section-dropdown">
+      <p class="info"> How to play: </p>
+      <p class="info"> 📷 Rotate camera with the LMB and move around with RMB </p>
+      <p class="info"> 🧠 Select a hole with keys 1-8 </p>
+      <p class="info"> 🎨 Choose one of the following colors in play with the corresponding key: </p>
+      <p class="info" id="info_color_red" hidden> ➡️➡️ R - <span style="color: rgb(255, 0, 0);">Red</span> </p>
+      <p class="info" id="info_color_green" hidden> ➡️➡️ G - <span style="color: rgb(0, 255, 8);">Green</span> </p>
+      <p class="info" id="info_color_indigo" hidden> ➡️➡️ I - <span style="color: #6A5DFF;">Indigo</span> </p>
+      <p class="info" id="info_color_yellow" hidden> ➡️➡️ Y - <span style="color: #FFFF00;">Yellow</span> </p>
+      <p class="info" id="info_color_purple" hidden> ➡️➡️ P - <span style="color: #6A0DAD;">Purple</span> </p>
+      <p class="info" id="info_color_white" hidden> ➡️➡️ W - <span style="color: #ffffff;">White</span> </p>
+      <p class="info" id="info_color_orange" hidden> ➡️➡️ O - <span style="color: #FF7F00;">Orange</span> </p>
+      <p class="info" id="info_color_fuchsia" hidden> ➡️➡️ F - <span style="color: #FF00FF;">Fuchsia</span> </p>
+      <p class="info" id="info_color_maroon" hidden> ➡️➡️ M - <span style="color: #800000;">Maroon</span> </p>
+      <p class="info" id="info_color_teal" hidden> ➡️➡️ T - <span style="color: #008080;">Teal</span> </p>
+      <p class="info" id="info_color_hot_pink" hidden> ➡️➡️ H - <span style="color: #FF69B4;">Hot pink</span> </p>
+      <p class="info" id="info_color_black" hidden> ➡️➡️ B - <span style="color: #000000;">Black</span> </p>
+      <p class="info"> ✨ When you are done choosing a guess, press Enter! </p>
+    </div>
+    <h1 id="loading">Loading...</h1>
+  </div>
+  
+</body>
+
+</html>
