@@ -1,5 +1,4 @@
 import * as THREE from 'three';
-import * as GSAP from 'gsap';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { RGBELoader } from 'three/examples/jsm/loaders/RGBELoader';
 
