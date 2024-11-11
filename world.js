@@ -45,13 +45,16 @@ const copperMaterial = new THREE.MeshStandardMaterial({
 // Original used: https://ambientcg.com/view?id=PaintedWood007B
 const paintedWoodTexture = new THREE.TextureLoader().load('textures/paintedWood007/PaintedWood007B_2K-PNG_Color.png');
 const paintedWoodTextureNormalTexture = new THREE.TextureLoader().load('textures/paintedWood007/PaintedWood007B_2K-PNG_NormalGL.png');
+const paintedWoodTextureRoughnessTexture = new THREE.TextureLoader().load('textures/paintedWood007/PaintedWood007B_2K-PNG_Roughness.png');
 paintedWoodTexture.wrapS = THREE.RepeatWrapping;
 paintedWoodTexture.wrapT = THREE.RepeatWrapping;
 const paintedWoodMaterial = new THREE.MeshStandardMaterial({
     map: paintedWoodTexture,
-    normalMap: paintedWoodTextureNormalTexture
+    normalMap: paintedWoodTextureNormalTexture,
+    roughnessMap: paintedWoodTextureRoughnessTexture
 });
 
+// Light wood texture
 // Original used: https://ambientcg.com/view?id=Wood022
 const wood022Texture = new THREE.TextureLoader().load('textures/wood022/Wood022_2K-PNG_Color.png');
 const wood022TextureNormalTexture = new THREE.TextureLoader().load('textures/wood022/Wood022_2K-PNG_NormalGL.png');
@@ -62,6 +65,7 @@ const wood022Material = new THREE.MeshStandardMaterial({
     roughnessMap: wood022RoughnessTexture
 });
 
+// Dark rough wood texture
 // Original used: https://ambientcg.com/view?id=Wood039
 const wood039Texture = new THREE.TextureLoader().load('textures/wood039/Wood039_2K-PNG_Color.png');
 const wood039TextureNormalTexture = new THREE.TextureLoader().load('textures/wood039/Wood039_2K-PNG_NormalGL.png');
@@ -74,6 +78,7 @@ const wood039Material = new THREE.MeshStandardMaterial({
     roughnessMap: wood39RoughnessTexture
 });
 
+// Brown wood texture
 // Original used: https://ambientcg.com/view?id=Wood077
 const wood077Texture = new THREE.TextureLoader().load('textures/wood077/Wood077_2K-PNG_Color.png');
 const wood077TextureNormalTexture = new THREE.TextureLoader().load('textures/wood077/Wood077_2K-PNG_NormalGL.png');
@@ -85,17 +90,6 @@ const wood077Material = new THREE.MeshStandardMaterial({
     normalMap: wood077TextureNormalTexture,
     roughnessMap: wood077RoughnessTexture
 });
-
-
-
-function add_plane() {
-    let geometry = new THREE.BoxGeometry(50, 0, 50);
-    let material = new THREE.MeshBasicMaterial({ color: 'purple' });
-    let plane = new THREE.Mesh(geometry, material);
-
-    plane.position.set(0, 0, 0);
-    scene.add(plane)
-}
 
 function add_box(sizeX, sizeY, sizeZ, posX, posY, posZ, material) {
     let geometry = new THREE.BoxGeometry(sizeX, sizeY, sizeZ);
@@ -444,7 +438,7 @@ export function init_world(codeSize, numColors, numTries) {
 
     const loader = new RGBELoader();
     loader.load(
-        "textures/background.hdr", //original used: https://polyhaven.com/a/ninomaru_teien
+        "textures/background.hdr", // Original used: https://polyhaven.com/a/ninomaru_teien
         function (texture) {
         texture.mapping = THREE.EquirectangularReflectionMapping;
         scene.background = texture;

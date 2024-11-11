@@ -4,7 +4,6 @@ import * as LOGIC from './logic.js';
 
 let codeSize = 0, numColors = 0, numTries = 0, isRepeatAllowed = false;
 
-
 function validate_input() {
     codeSize = document.getElementById('codeSize').value;
     numColors = document.getElementById('numColors').value;

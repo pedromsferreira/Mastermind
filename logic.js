@@ -10,7 +10,6 @@ const keyColors = ['R', 'G', 'I', 'Y', 'P', 'W',
 
 let selColors = [], selColorsKeys = [];
 
-
 const pinColors = ['white', 'black'];
 
 let secretCode, currTry = 0, currSlot = 0, numSlots = 4;
