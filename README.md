@@ -56,3 +56,15 @@ You can run the game locally using npm and [Vite](https://vite.dev/). Create a d
 ```bash
 npm run dev
 ```
+
+If you prefer to use [Docker](https://www.docker.com/), I have added a Dockerfile and docker-compose.yml template for you to build your own Docker image. To do so, you can do for example:
+
+```bash
+docker build . -t "mastermind:latest"
+```
+
+Followed by:
+
+```bash
+docker compose up -d
+```

@@ -1,0 +1,11 @@
+services:
+  mastermind:
+    image: mastermind:latest
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      - NODE_ENV: production
+    # ports:
+    #   - "8668:8668"
+    restart: unless-stopped
