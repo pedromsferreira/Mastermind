@@ -51,7 +51,7 @@ If you want to use other textures, you will need to make changes in the world.js
 
 # Usage
 
-You can run the game locally using npm in the working directory with:
+You can run the game locally using npm and [Vite](https://vite.dev/). Create a dev environment with Vite and run the project with:
 
 ```bash
 npm run dev
