@@ -12,7 +12,7 @@ This project is implemented as a single-player game using Javascript, pitting th
 
 # Installation
 
-Inside your working directory, you need to install the dependencies using npm with:
+Inside your working directory, you need to install the dependencies using [npm](https://www.npmjs.com/) with:
 
 ```bash
 npm install
