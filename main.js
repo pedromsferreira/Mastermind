@@ -15,8 +15,8 @@ function validate_input() {
         return;
     }
 
-    if(numColors < 6 || numColors > 12) {
-        alert('Number of colors must be between 6 and 12!');
+    if(numColors < 4 || numColors > 12) {
+        alert('Number of colors must be between 4 and 12!');
         return;
     }
 
