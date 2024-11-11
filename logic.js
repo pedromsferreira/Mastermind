@@ -18,13 +18,16 @@ const guess = new Map();
 function check_submitted_guess(secretCode, guess) {
     let result = [];
 
+    // Check for exact matches (black pins)
     for(let i = 0; i < secretCode.length; i++) {
-        // Check for exact matches
         if(secretCode[i] === guess[i]) {
             result.push(pinColors[1]);
             continue;
         }
-        // Check for color matches only when exact matches are not found
+    }
+
+    // Check for color matches only (white pins)
+    for(let i = 0; i < secretCode.length; i++) {
         for(let j = 0; j < secretCode.length; j++) {
             if(secretCode[i] === guess[j] && i !== j) {
                 result.push(pinColors[0]);
