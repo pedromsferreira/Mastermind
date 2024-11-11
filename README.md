@@ -4,7 +4,7 @@ Mastermind is a tabletop game for 2 players where one player submits a hidden co
 
 The project aimed at learning the basics of building 3D environments in games. For that purpose, the project uses [Three.js](https://threejs.org/) to render all the geometry in-game.
 
-![screenshot][example.png]
+![screenshot](example.png)
 
 # Description
 
